@@ -1,5 +1,5 @@
 ## Note: This repository is under construction since the project is ongoing
-### _[Hi, Mohan(Contributer). If you suggest any changes here, do it right away]_
+### _[Hi, Mohan, Rishi(Contributers). If you suggest any changes here, do it right away]_
 <br>
 <br>
 <br>
