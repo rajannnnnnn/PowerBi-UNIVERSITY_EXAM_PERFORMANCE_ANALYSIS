@@ -1,3 +1,3 @@
-## Note: This repository is under construction since the project is ongoing
+## Note: This project is ongoing
 
-# BaaaaaaaaaaaaaaaaaaaaaaaaaNG
+### When there is BaaaaaaaaaaaaaaaaaaaaaaaaaNG, there is Sarath
