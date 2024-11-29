@@ -1,3 +1,3 @@
 ## Note: This project is ongoing
 
-### When there is BaaaaaaaaaaaaaaaaaaaaaaaaaNG, there is Sarath
+### When there is BaaaNG, there is Sarath
