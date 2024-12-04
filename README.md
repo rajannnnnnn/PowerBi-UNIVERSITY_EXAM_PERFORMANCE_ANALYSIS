@@ -1,85 +1,51 @@
 # University Exam Performance Analysis
 
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Dataset Information](#dataset-information)
-- [Installation Instructions](#installation-instructions)
-- [Usage Guide](#usage-guide)
-- [Data Modeling & DAX Calculations](#data-modeling--dax-calculations)
-- [Visualizations and Dashboards](#visualizations-and-dashboards)
-- [Known Limitations](#known-limitations)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-- [Contact](#contact)
+## Overview
+The "University Exam Performance Analysis" project aims to provide in-depth insights into student performance, including trends in grades, arrears, fund losses, and graduation type classifications. The PowerBI dashboard uses interactive visualizations to allow users to analyze data department-wise and year-wise (batch).
 
-## Project Overview
-The **University Exam Performance Analysis** project is a collaborative effort involving a team of four members. It focuses on analyzing and visualizing university exam performance data using Power BI. The project aims to provide valuable insights into key academic performance metrics, such as graduation rates, student arrears, and grading details. The analysis is supported by data from multiple datasets related to student performance, department details, and exam results.
+## Technology Stack
+- **Data Extraction & Processing**: Python (using `docx`, `pandas`, and `openpyxl`)
+- **Data Visualization**: PowerBI
+- **Data Conversion Pipeline**: PDF → Word (via ilovepdf.com) → Python Dictionary → Pandas DataFrame → Excel → Power Query → PowerBI
 
 ## Features
-- **Interactive Data Visualizations**: Includes charts, graphs, and KPIs for visual analysis of exam performance and trends.
-- **Trend Analysis**: Visual representation of performance trends over multiple academic years and semesters.
-- **Grading System Insights**: Detailed visualization of performance data based on grading system thresholds.
-- **Arrears Tracking**: A focused analysis of arrears over different semesters, highlighting areas for improvement.
+- **Slicers for Interactive Analysis**: Users can filter data by **Department** and **Batch (Year Joined)**.
+- **Exam Performance Analysis**: Visualizes student performance based on grades, arrears, and department.
+- **Grading and Arrears Over Semesters**: Provides an overview of grade distribution, arrears across semesters, and revaluation information.
+- **Graduation Type and Department Classification**: Analyzes graduation types and department-wise performance trends.
+  
+## Data Privacy
+- This project is **view-only** and does not allow any modifications to the data.
+- All data is private and confidential, and it is handled in compliance with appropriate data privacy standards.
 
 ## Dataset Information
-The datasets used in this project include:
+The dataset includes the following key details:
+- **Exam Date**
+- **Register Number**
+- **Subject Code**
+- **Grade Achieved**
+- **Arrears Data (Semester-wise)**
 
-1. **Students Performance**:
-   - Contains detailed exam data including `Register Number`, `Subject Code`, `Grade`, and `Exam Date`.
-   
-2. **Department Details**:
-   - Information about university departments, such as `Department ID`, `Department Name`, and `Short Name`.
+## Data Conversion Process
+1. **PDF to Word**: Initial PDF files are converted to Word format using [ilovepdf.com](https://www.ilovepdf.com).
+2. **Word to Python Dictionary**: The Word file is then parsed using Python's `python-docx` module to convert it into a dictionary format.
+3. **Dictionary to Pandas DataFrame**: Data is processed and cleaned into a Pandas DataFrame.
+4. **Data to Excel**: Cleaned data is exported to Excel for use in Power Query.
+5. **PowerBI Visualization**: The processed data is then used in PowerBI to create an interactive dashboard.
 
-3. **Students Summary**:
-   - Includes demographic and academic information for each student, including `Graduation Type`, `Join Type`, and `Arrears Track`.
+## Installation & Setup
+There are no installation instructions as this project is a **view-only** PowerBI dashboard. The data processing and extraction steps are handled externally.
 
-4. **Exams Details**:
-   - Data related to exams, including `Exam Date`, `Grade`, and `Semester information`.
+## Contributors
+This project was developed by:
+- **Mohanraj S**
+- **Rajan N**
+- **Rishi Kanna S**
+- **Rajkumar K**
 
-5. **Grading System**:
-   - Details of the grading system, including grade boundaries and regulations.
+Special thanks to:
+- **NATARAJAN** (Principal) for project approval
+- **PRINCE** (DB Admin) for providing the dataset
 
-6. **Arrears Tracking**:
-   - A record of arrears over different semesters, linked to student performance.
-
-## Installation Instructions
-To get started with the project, follow these steps:
-
-1. **Clone or Download the Repository**:
-   - Clone this repository or download the `.pbix` Power BI file to your local system.
-
-2. **Open Power BI Desktop**:
-   - Launch Power BI Desktop and open the `.pbix` file.
-
-3. **Publish to Power BI Service** (Optional):
-   - If you would like to share the reports, publish them to Power BI Service.
-
-## Usage Guide
-Once the project is loaded into Power BI, you can interact with the dashboards as follows:
-
-1. **Explore Dashboards**:
-   - Navigate through the various interactive dashboards to gain insights into university performance metrics.
-   
-2. **Apply Filters and Slicers**:
-   - Use filters and slicers to drill down into specific departments, academic years, or performance scores.
-
-3. **Arrears Analysis**:
-   - Track arrears over multiple semesters and identify trends or areas for improvement.
-
-4. **Trend Analysis**:
-   - Visualize performance trends over time using line charts and bar charts.
-
-## Data Modeling & DAX Calculations
-The data model for this project connects various datasets to ensure accurate analysis. Key relationships between datasets have been established to provide a cohesive view of the performance data:
-
-- **Student Performance and Department**: Linked by `Department ID`.
-- **Student Summary and Performance**: Linked by `Register Number`.
-- **Arrears and Exam Details**: Linked by `Register Number` and `Semester`.
-- **Grading System and Performance**: Linked by `Grade`.
-
-### Key DAX Calculations:
-- **Average Graduation Rate**:
-  ```DAX
-  Average Graduation Rate = AVERAGE(Student Data[Graduation Rate])
+## License
+This project is provided for **view-only** purposes and cannot be modified. Redistribution or adaptation is not permitted.
