@@ -15,9 +15,9 @@
 - [Contact](#contact)
 
 ## Project Overview
-The **University Exam Performance Analysis** project is an analytical tool built using PowerBI to provide valuable insights into the academic performance of university students. The dashboard aggregates student data, focusing on grade distribution, arrears, graduation trends, and department performance over multiple semesters. It presents actionable insights to educational administrators, professors, and decision-makers.
+This collaborative project involves a team of four members working on the analysis and visualization of university exam performance using Power BI. The goal is to gather key data on various metrics such as academic performance, student fund matters and graduation classification, and then analyze and present these in a meaningful way.
 
-The project is based on a data pipeline that involves the conversion of raw exam data from PDFs to PowerBI visualizations. The dashboard allows users to interactively explore the data using slicers and filters for a more customized analysis.
+The project leverages Power BI’s robust capabilities to create interactive dashboards, insightful visualizations, and custom metrics that help uncover trends and performance peaks and downfalls in exams.
 
 ## Features
 - **Interactive Filters and Slicers**: 
@@ -60,7 +60,7 @@ This project is a **view-only** PowerBI dashboard, and no installation or setup 
 2. **Dataset Access**: The underlying dataset is pre-loaded into the PowerBI report, and no additional data import is needed.
 
 For developers wishing to replicate or extend the project:
-- Python libraries used for data extraction and transformation (such as `python-docx`, `pandas`, `openpyxl`) are essential.
+- Python libraries used for data extraction and transformation (such as `python-docx`, `pandas`) are essential.
 - The data pipeline can be replicated using the aforementioned tools if a similar dataset is available.
 
 ## Technology Stack
@@ -68,24 +68,14 @@ For developers wishing to replicate or extend the project:
 ### Data Pipeline
 The data pipeline for this project follows this flow:
 
-- **PDF → Word → Python Dictionary → Pandas → Excel → Power BI**
+- **PDF → Word → Python Dictionary → Pandas Dataframe→ Excel → Power BI**
 
 ### Breakdown:
-1. **PDF → Word**:  
-   - Raw data is extracted from PDF and converted into Word format using **iLovePDF**.
-
-2. **Word → Python Dictionary**:  
-   - The Word document is parsed using **python-docx** in Python, extracting the data into a Python dictionary.
-
-3. **Python Dictionary → Pandas Dataframe**:  
-   - The dictionary data is loaded into **Pandas Dataframe** for cleaning, transformation, and preparation.
-
-4. **Pandas Dataframe → Excel**:  
-   - The cleaned data is exported to **Excel** for easy handling and further processing.
-
-5. **Excel → Power BI**:  
-   - The structured data is imported into **Power BI** using **Power Query** for additional data transformation and visualization creation.
-
+1. **PDF → Word**:   Raw data is extracted from PDF and converted into Word format using **iLovePDF**.
+2. **Word → Python Dictionary**:      The Word document is parsed using **python-docx** in Python, extracting the data into a Python dictionary.
+3. **Python Dictionary → Pandas Dataframe**:      The dictionary data is loaded into **Pandas Dataframe** for cleaning, transformation, and preparation.
+4. **Pandas Dataframe → Excel**:      The cleaned data is exported to **Excel** for easy handling and further processing.
+5. **Excel → Power BI**:      The structured data is imported into **Power BI** using **Power Query** for additional data transformation and visualization creation.
 This streamlined pipeline ensures efficient data processing from raw extraction to insightful visualizations.
 
 
@@ -108,7 +98,7 @@ Once you open the PowerBI dashboard, you can begin exploring the data in a few s
 ## Data Modeling & DAX Calculations
 The data modeling process leverages **Data Analysis Expressions (DAX)** in PowerBI to derive key performance metrics and insights. Some of the key DAX calculations include:
 
-- **Grade Point Average (GPA) Calculation**: A measure that calculates the average grade point for students based on their subject grades.
+- **Attempts**: A measure that calculates the attempt of the subject where they got passed.
 - **Arrears Count**: A calculated column that identifies the number of arrears each student has across semesters.
 - **Graduation Classification Trends**: A calculated measure that identifies trends in graduation classifications (e.g., Distinction, First Class, Second Class) across various departments.
 - **Revaluation Impact**: A DAX measure to calculate the percentage change in grades post-revaluation.
@@ -140,7 +130,7 @@ While this project provides valuable insights into student performance, there ar
 ### 1. **Time Frame of Data**
 - The dataset contains exam data starting from **December 2017** through **May 2024**. As such, students who joined the university **before 2017** or **after 2021** may have incomplete data. This is due to the nature of the dataset, which only includes records from specific academic years, making it less reliable for analysis for students outside this time frame. It was filtered out in Visualizations.
 
-### 2. **Data for New Students**
+### 2. **Data for Recent Candidates**
 - For students who joined after **2021**, certain details, such as **Graduation Classification**, may be **provisional**. This means that these values are subject to change over time, and their final status has yet to be confirmed as these students progress through their academic journey.
 
 
@@ -161,10 +151,8 @@ This project is licensed under a **view-only** license and cannot be modified, r
 
 We would like to express our sincere gratitude to the following individuals and organizations for their valuable contributions to this project:
 
-### Project Approval and Guidance
 - **NATARAJAN** Principal, GIET, Vellore: For approving the project and providing the necessary guidance throughout its development. Their support was instrumental in driving this project forward.
 
-### Dataset and Technical Support
 - **PRINCE** DB Administrator, GIET, Vellore: For providing the comprehensive dataset needed to power the analysis. His assistance in extracting, cleaning, and sharing the data in an accessible format (including database access) was essential to the project’s success.
 
 ### Development Team
@@ -183,7 +171,7 @@ The project was developed by a dedicated team of students who contributed their 
 ## Contact
 For any questions, feedback, or inquiries regarding this project, please contact the team at:
 
-- **Mohanraj S**: mohan.email@example.com
-- **Rajan N**: shalini.email@example.com
-- **Rishi Kanna S**: karthik.email@example.com
-- **Rajkumar K**: karthik.email@example.com
+- **Mohanraj S**: 
+- **Rajan N**: rajanofficial002@gmail.com
+- **Rishi Kanna S**: rishikanna.sivakumar.official@gmail.com
+- **Rajkumar K**: rr6942171l@gmail.com
