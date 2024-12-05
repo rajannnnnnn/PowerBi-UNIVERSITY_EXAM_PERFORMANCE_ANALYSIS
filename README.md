@@ -171,7 +171,7 @@ The project was developed by a dedicated team of students who contributed their 
 ## Contact
 For any questions, feedback, or inquiries regarding this project, please contact the team at:
 
-- **Mohanraj S**: 
+- **Mohanraj S**: mohanraj.official.2004@gmail.com
 - **Rajan N**: rajanofficial002@gmail.com
-- **Rishi Kanna S**: rishikanna.sivakumar.official@gmail.com
+- **Rishi Kanna S**: rishikanna.sivakumar.off@gmail.com
 - **Rajkumar K**: rr6942171l@gmail.com
